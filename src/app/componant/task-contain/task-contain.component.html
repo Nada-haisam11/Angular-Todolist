@@ -1,0 +1,23 @@
+<div class="container">
+    <div *ngIf="!taskid">
+        <p class="alert alert-danger">there is no task id</p>
+    </div>
+    
+    <div *ngIf="taskid">
+        <h2 class="text-center mt-5 mb-5">Details of {{task.title}}</h2>
+
+        <h5 class="p-3">title :</h5>
+      <input type="text" class="form-control" placeholder="task title" [(ngModel)] ="task.title">
+
+      <h5 class="mt-3 p-3 ">discription :</h5>
+      <textarea class="form-control mt-2 " [(ngModel)] ="task.discription"></textarea>
+
+     <!-- <div class="mt-3">
+        <button class="btn btn-primary m-1" >Update</button>
+        <button class="btn btn-danger" >Delate</button>  
+     </div> -->
+
+      <a routerLink="" class="btn btn-danger mb-5 tasks">Cancel</a>
+    </div>
+    
+</div>
